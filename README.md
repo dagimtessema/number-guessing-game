@@ -21,4 +21,5 @@ A simple Python-based number guessing game that challenges the user to guess a r
 ### Prerequisites
 Make sure you have Python installed. You can check by running:
 ```bash
+python --version
 
