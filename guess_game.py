@@ -13,8 +13,11 @@ def guess_game():
         guess = int(user_input)  # Convert input to an integer
 
         # Compare the guess to the random number
-        if guess != random_num:
-            print("Wrong guess, try again.")
+        if guess < random_num:
+            print("Wrong guess, try higher.") # Give hint to guess a higher number
+            guess_game()  # Recursively call the function to try again
+        elif guess>random_num:
+            print("Wrong guess, try lower.")  # Give hint to guess a lower number
             guess_game()  # Recursively call the function to try again
         else:
             print("🎉 Bingo!")  # Correct guess
